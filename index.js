@@ -86,7 +86,7 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
-
+books.forEach((element)=> console.log())
 //Sort books from oldest to most recent
 
 //sort books alphabetically
@@ -100,3 +100,5 @@ const titles = [
 //was every book published within the last 100 years?
 
 //print a list of books that "includes" the genre historical
+books.filter((historical)=> historical.historical === true);
+console.log(historical);
