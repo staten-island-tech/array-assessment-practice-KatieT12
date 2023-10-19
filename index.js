@@ -86,9 +86,16 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
-books.forEach((element)=> console.log())
-//Sort books from oldest to most recent
+/* Author = books.authorLast;
+Year = books.publishDate; */
+$author = books.authorLast;
+$publishdate = books.publishdate;
+$booktitle = books.name;
 
+books.forEach((titles)=> console.log('$author wrote $booktitle in $publishdate.'));
+//Sort books from oldest to most recent
+function
+books.sort();
 //sort books alphabetically
 
 //Find who wrote War and Peace
@@ -100,5 +107,6 @@ books.forEach((element)=> console.log())
 //was every book published within the last 100 years?
 
 //print a list of books that "includes" the genre historical
-books.filter((historical)=> historical.historical === true);
-console.log(historical);
+books.forEach(element => {
+  console.log()
+})
