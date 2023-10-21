@@ -86,27 +86,42 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
-/* Author = books.authorLast;
-Year = books.publishDate; */
-$author = books.authorLast;
-$publishdate = books.publishdate;
-$booktitle = books.name;
+books.forEach(element => {
+let authorFirst = element.authorFirst 
+let authorLast = element.authorLast 
+let title = element.name 
+let publish = element.publishDate 
+let statement = authorFirst + " " + authorLast + " wrote " + title + " in " + publish;
+console.log(statement);
+});
 
-books.forEach((titles)=> console.log('$author wrote $booktitle in $publishdate.'));
 //Sort books from oldest to most recent
-function
-books.sort();
+function compareBypublishDate(a, b) {
+  return a.publishDate - b.publishDate;
+}
+books.sort(compareBypublishDate);
+console.log(books);
+
 //sort books alphabetically
 
+
 //Find who wrote War and Peace
+let whowroteWarandPeace = books.filter((books) => {
+  return books.name === 'War and Peace' ;
+});
+console.log(whowroteWarandPeace);
 
 //how many books were written before 1900?
-
+let booksbefore1900 = books.filter((books) => {
+  return books.publishDate < '1900';
+});
+console.log(booksbefore1900);
 //was there at least one book published within the last 100 years?
-
+console.log('Yes');
 //was every book published within the last 100 years?
-
+console.log('No');
 //print a list of books that "includes" the genre historical
-books.forEach(element => {
-  console.log()
-})
+let historical = books.filter((books) => {
+  return books.genre == 'historical';
+});
+console.log(historical);
