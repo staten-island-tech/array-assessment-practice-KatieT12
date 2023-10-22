@@ -96,32 +96,33 @@ console.log(statement);
 });
 
 //Sort books from oldest to most recent
-function compareBypublishDate(a, b) {
-  return a.publishDate - b.publishDate;
+function compareBypublishDate(b1, b2) {
+  return b1.publishDate - b2.publishDate;
 }
 books.sort(compareBypublishDate);
-console.log(books);
+books.forEach((books) => console.log(books.name));
 
 //sort books alphabetically
-
-
+titles.sort();
+console.log(titles);
 //Find who wrote War and Peace
-let whowroteWarandPeace = books.filter((books) => {
-  return books.name === 'War and Peace' ;
-});
-console.log(whowroteWarandPeace);
+books
+.filter((books) => books.name.includes('War and Peace'))
+.forEach((books) => console.log(books.authorFirst + " " + books.authorLast));
 
 //how many books were written before 1900?
 let booksbefore1900 = books.filter((books) => {
-  return books.publishDate < '1900';
+  return books.publishDate < '1900' ;
 });
-console.log(booksbefore1900);
+booksbefore1900.forEach((books) => console.log(books.name));
+
 //was there at least one book published within the last 100 years?
 console.log('Yes');
+
 //was every book published within the last 100 years?
 console.log('No');
+
 //print a list of books that "includes" the genre historical
-let historical = books.filter((books) => {
-  return books.genre == 'historical';
-});
-console.log(historical);
+books
+.filter((books) => books.genre.includes('historical'))
+.forEach((books) => console.log(books.name));
